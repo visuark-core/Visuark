@@ -26,9 +26,9 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-gray-900">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+    <section id="about" className="py-16 sm:py-20 bg-gray-900">
+      <div className="container mx-auto px-2 sm:px-4">
+        <div className="text-center mb-10 sm:mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             About <span className="text-cyan-400">Visuark</span>
           </h2>
@@ -38,7 +38,7 @@ const About = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 items-center mb-10 sm:mb-16">
           <div>
             <h3 className="text-3xl font-bold text-white mb-6">Our Mission</h3>
             <p className="text-gray-300 text-lg leading-relaxed mb-6">
@@ -63,7 +63,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 mt-8">
           {values.map((value, index) => (
             <div
               key={value.title}

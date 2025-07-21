@@ -76,9 +76,9 @@ const Portfolio = () => {
     : projects.filter(project => project.category === activeFilter);
 
   return (
-    <section id="portfolio" className="py-20 bg-gray-900">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+    <section id="portfolio" className="py-16 sm:py-20 bg-gray-900">
+      <div className="container mx-auto px-2 sm:px-4">
+        <div className="text-center mb-10 sm:mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Our <span className="text-cyan-400">Portfolio</span>
           </h2>
@@ -87,7 +87,7 @@ const Portfolio = () => {
           </p>
 
           {/* Filter Buttons */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8 sm:mb-12">
             {filters.map((filter) => (
               <button
                 key={filter.key}
@@ -105,7 +105,7 @@ const Portfolio = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {filteredProjects.map((project) => (
             <div
               key={project.id}

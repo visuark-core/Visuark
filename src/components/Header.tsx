@@ -43,7 +43,7 @@ const Header = () => {
 
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-gray-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+      isScrolled ? 'bg-gray-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent lg:bg-transparent bg-gray-900/95 backdrop-blur-md shadow-lg'
     }`}>
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
@@ -142,7 +142,7 @@ const Header = () => {
               exit={{ opacity: 0, height: 0 }}
               className="lg:hidden mt-4 pb-4 border-t border-gray-700"
             >
-              <div className="flex flex-col space-y-4 pt-4">
+              <div className="flex flex-col space-y-4 pt-4 px-4 rounded-xl shadow-xl backdrop-blur-md bg-gray-900/70">
                 {navItems.map((item) => (
                   <Link
                     key={item.name}

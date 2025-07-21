@@ -31,9 +31,9 @@ const Stats = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-r from-gray-800 to-gray-900">
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <section className="py-16 sm:py-20 bg-gradient-to-r from-gray-800 to-gray-900">
+      <div className="container mx-auto px-2 sm:px-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {stats.map((stat, index) => (
             <motion.div
               key={stat.label}

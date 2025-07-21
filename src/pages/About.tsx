@@ -6,21 +6,21 @@ import PageTransition from '../components/PageTransition';
 const About = () => {
   const team = [
     {
-      name: 'Sarah Johnson',
-      role: 'Creative Director',
-      image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-      bio: 'With over 10 years in creative direction, Sarah leads our design vision and ensures every project tells a compelling story.'
+      name: 'Neeraj Kumhar',
+      role: 'Founder & CEO',
+      image: '/public/img/1.png',
+      bio: ' A passionate web developer and Founder of Visuark, specializing in crafting impactful digital solutions through expertise in Computer Science.'
     },
     {
-      name: 'Michael Chen',
-      role: 'Lead Developer',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+      name: 'Yogesh Tandi',
+      role: 'Co-Founder',
+      image: '/public/img/2.png',
       bio: 'Full-stack developer passionate about creating scalable, performant web applications using cutting-edge technologies.'
     },
     {
-      name: 'Emily Rodriguez',
+      name: 'Vansh Katiyar',
       role: 'UX/UI Designer',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+      image: '/public/img/3.png',
       bio: 'User experience specialist focused on creating intuitive, accessible designs that delight users and drive conversions.'
     },
     {
@@ -75,13 +75,11 @@ const About = () => {
   ];
 
   const milestones = [
-    { year: '2018', event: 'Visuark Founded', description: 'Started as a small design studio with big dreams' },
-    { year: '2019', event: 'First Major Client', description: 'Landed our first Fortune 500 company project' },
-    { year: '2020', event: 'Team Expansion', description: 'Grew to 15+ talented professionals' },
-    { year: '2021', event: 'Award Recognition', description: 'Won Best Digital Agency at Web Excellence Awards' },
-    { year: '2022', event: 'Global Expansion', description: 'Opened offices in London and Tokyo' },
-    { year: '2023', event: '500+ Projects', description: 'Completed over 500 successful projects worldwide' },
-    { year: '2024', event: 'Innovation Lab', description: 'Launched R&D division for emerging technologies' }
+    { year: '2024', event: 'Visuark Founded', description: 'Started as a small design studio with big dreams' },
+    { year: '2024', event: 'First Major Client', description: 'Landed our first Fortune 50 company project' },
+    { year: '2025', event: 'Team Expansion', description: 'Grew to 15+ talented professionals' },
+    { year: '2025', event: 'Award Recognition', description: 'Won Best Digital Agency at Web Excellence Awards' },
+    { year: '2025', event: 'Innovation Lab', description: 'Launched R&D division for emerging technologies' }
   ];
 
   return (
