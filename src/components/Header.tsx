@@ -22,6 +22,7 @@ const Header = () => {
     setIsServicesOpen(false);
   }, [location]);
 
+  // --- THIS IS THE ONLY SECTION THAT HAS BEEN MODIFIED ---
   const navItems = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
@@ -38,8 +39,10 @@ const Header = () => {
     },
     { name: 'Portfolio', path: '/portfolio' },
     { name: 'Blog', path: '/blog' },
+    { name: 'Referral', path: '/referral' }, // <-- ADDED THIS LINE
     { name: 'Contact', path: '/contact' }
   ];
+  // ----------------------------------------------------
 
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${

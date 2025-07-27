@@ -1,3 +1,5 @@
+// src/App.tsx
+
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
@@ -17,6 +19,7 @@ import TermsOfService from './pages/TermsOfService';
 import NotFound from './pages/NotFound';
 import ScrollToTop from './components/ScrollToTop';
 import LoadingSpinner from './components/LoadingSpinner';
+import Referral from './pages/Referral'; // <-- 1. IMPORT YOUR NEW PAGE
 
 function App() {
   return (
@@ -38,6 +41,7 @@ function App() {
                 <Route path="/careers" element={<Careers />} />
                 <Route path="/privacy" element={<PrivacyPolicy />} />
                 <Route path="/terms" element={<TermsOfService />} />
+                <Route path="/referral" element={<Referral />} /> {/* <-- 2. ADD THE ROUTE */}
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </AnimatePresence>

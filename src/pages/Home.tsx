@@ -4,7 +4,6 @@ import PageTransition from '../components/PageTransition';
 import Hero from '../components/Hero';
 import About from '../components/About';
 import Services from '../components/Services';
-import Portfolio from '../components/Portfolio';
 import Contact from '../components/Contact';
 import Testimonials from '../components/Testimonials';
 import Stats from '../components/Stats';
@@ -17,7 +16,6 @@ const Home = () => {
       <Stats />
       <About />
       <Services />
-      <Portfolio />
       <Testimonials />
       <CTA />
       <Contact />
