@@ -22,6 +22,23 @@ import LoadingSpinner from './components/LoadingSpinner';
 import Referral from './pages/Referral'; // <-- 1. IMPORT YOUR NEW PAGE
 
 function App() {
+  const [loading, setLoading] = React.useState(true);
+
+  React.useEffect(() => {
+    // Simulate loading for 1s or until window 'load' event
+    const handleLoad = () => setLoading(false);
+    window.addEventListener('load', handleLoad);
+    const timer = setTimeout(() => setLoading(false), 1000);
+    return () => {
+      window.removeEventListener('load', handleLoad);
+      clearTimeout(timer);
+    };
+  }, []);
+
+  if (loading) {
+    return <LoadingSpinner />;
+  }
+
   return (
     <HelmetProvider>
       <Router>
