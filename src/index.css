@@ -1,3 +1,7 @@
+/* ======================================= */
+/* === COMPLETE CSS FOR PORTFOLIO PAGE === */
+/* ======================================= */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -34,6 +38,20 @@
   animation: fadeInUp 0.6s ease-out forwards;
 }
 
+/* Logo scroller animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.scroller-inner {
+  animation: scroll 40s linear infinite;
+}
+
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
@@ -66,6 +84,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  background-color: #030712; 
 }
 
 /* Prose styles for blog content */
@@ -122,16 +141,6 @@ body {
   transform: scale(1.05);
 }
 
-/* Card hover effects */
-.card-hover {
-  transition: all 0.3s ease;
-}
-
-.card-hover:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0, 188, 212, 0.1);
-}
-
 /* Backdrop blur support */
 .backdrop-blur-fallback {
   background-color: rgba(17, 24, 39, 0.8);
@@ -142,4 +151,76 @@ body {
     backdrop-filter: blur(10px);
     background-color: rgba(17, 24, 39, 0.6);
   }
+}
+
+/* =============================================== */
+/* === FINAL COMBINED HOVER EFFECT (BEST OF BOTH) === */
+/* =============================================== */
+
+/* Define the animation for the rotating gradient border */
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+/* Base card styles */
+.card-hover {
+  position: relative; /* Crucial for positioning the pseudo-element */
+  z-index: 0;
+  overflow: hidden; /* Hides the pseudo-element when it's not hovered */
+  transition: transform 0.3s ease, border-color 0.3s ease; /* Smooth transition for pop-up and border */
+}
+
+/* The pseudo-element that creates the animated gradient border */
+.card-hover::before {
+  content: '';
+  position: absolute;
+  z-index: -2;
+  left: -50%;
+  top: -50%;
+  width: 200%;
+  height: 200%;
+  background-color: #1a202c; /* A slightly lighter dark color */
+  background-repeat: no-repeat;
+  background-size: 50% 50%, 50% 50%;
+  background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+  /* This creates the conic gradient for the 'chase' effect */
+  background-image: conic-gradient(#00bcd4, #ff6b35, #0891b2, #00bcd4);
+  
+  /* Animate the rotation */
+  animation: rotate 4s linear infinite;
+  
+  /* Start with it hidden */
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+
+/* This pseudo-element creates the dark background inside the glowing border */
+.card-hover::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: 3px;
+  top: 3px;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  background: #111827; /* Match your card background color */
+  border-radius: 12px; /* Should be slightly less than the parent's border-radius */
+}
+
+
+/* --- ON HOVER --- */
+.card-hover:hover {
+  /* This is the strong POP-UP effect you requested */
+  transform: translateY(-12px) scale(1.05);
+  box-shadow: 0 25px 50px -12px rgba(0, 188, 212, 0.25);
+  
+  /* Make the original border transparent to let the glow show through */
+  border-color: transparent !important;
+}
+
+/* On hover, make the glowing ::before element visible to start the animation */
+.card-hover:hover::before {
+  opacity: 1;
 }
